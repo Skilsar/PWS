@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\Simplex_VSA\Reference.cs">
+    <Compile Include="Connected Services\Simplex_TVN\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -75,22 +75,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\Simplex_VSA\PWS_4_WF.Simplex_VSA.A.datasource">
+    <None Include="Connected Services\Simplex_TVN\PWS_4_WF.Simplex_TVN.A.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Simplex_VSA\PWS_4_WF.Simplex_VSA.ASMXADD1.datasource">
+    <None Include="Connected Services\Simplex_TVN\PWS_4_WF.Simplex_TVN.ConcatResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Simplex_VSA\PWS_4_WF.Simplex_VSA.ASMXADDS1.datasource">
+    <None Include="Connected Services\Simplex_TVN\PWS_4_WF.Simplex_TVN.SumResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Simplex_VSA\PWS_4_WF.Simplex_VSA.ASMXCONCAT1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\Simplex_VSA\PWS_4_WF.Simplex_VSA.ASMXSUM1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\Simplex_VSA\Simplex.wsdl" />
+    <None Include="Connected Services\Simplex_TVN\Simplex.wsdl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -108,19 +102,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\Simplex_VSA\" />
+    <WCFMetadataStorage Include="Connected Services\Simplex_TVN\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Simplex_VSA\Simplex.disco" />
+    <None Include="Connected Services\Simplex_TVN\Simplex.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Simplex_VSA\configuration91.svcinfo" />
+    <None Include="Connected Services\Simplex_TVN\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Simplex_VSA\configuration.svcinfo" />
+    <None Include="Connected Services\Simplex_TVN\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Simplex_VSA\Reference.svcmap">
+    <None Include="Connected Services\Simplex_TVN\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

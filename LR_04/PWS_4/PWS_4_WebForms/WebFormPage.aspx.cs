@@ -6,7 +6,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebServices.SimplexS;
 
-
 namespace PWS_4_WebForms
 {
     public partial class WebFormPage : System.Web.UI.Page
@@ -15,7 +14,7 @@ namespace PWS_4_WebForms
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            simplex = new SimplexImplemetation();
+            simplex = new SimplexImplementaion();
             int.TryParse(x.Value, out int paramX);
             int.TryParse(y.Value, out int paramY);
 

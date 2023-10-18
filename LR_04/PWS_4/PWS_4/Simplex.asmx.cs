@@ -5,25 +5,25 @@ using System.Web.Services;
 
 namespace PWS_4
 {
-    [WebService(Namespace = "http://VSA/", Description = "Simplex ASMX Service")]
+    [WebService(Namespace = "http://TVN/", Description = "Simplex Service")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     [ScriptService]
     public class Simplex : WebService
     {
-        [WebMethod(MessageName = "ASMX.ADD", Description = "Sum of 2 numbers")]
+        [WebMethod(MessageName = "Add", Description = "Sum of 2 int")]
         public int Add(int x, int y)
         {
             return x + y;
         }
 
-        [WebMethod(MessageName = "ASMX.CONCAT", Description = "Concat of string and double")]
+        [WebMethod(MessageName = "Concat", Description = "Concatination of string and double")]
         public string Concat(string s, double d)
         {
             return s + " " + d.ToString();
         }
 
-        [WebMethod(MessageName = "ASMX.SUM", Description = "Sum of fileds of two [A] objects. Return [A] object")]
+        [WebMethod(MessageName = "Sum", Description = "Sum of fileds of two [A] objects. Return [A] object")]
         public A Sum(A a1, A a2)
         {
             ParseBody(Context.Request);
@@ -36,6 +36,7 @@ namespace PWS_4
             request.InputStream.Position = 0;
             var body = string.Empty;
 
+            request.SaveAs("C:\\Progi\\HttpRequest.txt", true);
             using (Stream receiveStream = request.InputStream)
             {
                 using (StreamReader readStream = new StreamReader(receiveStream, true))
@@ -48,7 +49,7 @@ namespace PWS_4
         }
 
         [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
-        [WebMethod(MessageName = "ASMX.ADDS", Description = "Sum of 2 int. Response JSON")]
+        [WebMethod(MessageName = "Adds", Description = "Sum of 2 int. Response JSON")]
         public int Adds(int x, int y)
         {
             return x + y;

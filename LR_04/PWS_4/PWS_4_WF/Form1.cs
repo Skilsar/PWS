@@ -1,4 +1,4 @@
-﻿using PWS_4_WF.Simplex_VSA;
+﻿using PWS_4_WF.Simplex_TVN;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -7,13 +7,13 @@ namespace PWS_4_WF
 {
     public partial class Form1 : Form
     {
-       //SimplexSoapClient simplex_client;
-        Simplex simplex_client;
+        SimplexSoapClient simplex_client;
+        //Simplex simplex_client;
 
         public Form1()
         {
-           //this.simplex_client = new SimplexSoapClient();
-           this.simplex_client = new Simplex();
+           this.simplex_client = new SimplexSoapClient();
+            //this.simplex_client = new Simplex();
             InitializeComponent();
         }
 
@@ -22,28 +22,28 @@ namespace PWS_4_WF
             try
             {
                 // for connected service
-               // Simplex_VSA.A obj1 = new Simplex_VSA.A();
-                //Simplex_VSA.A obj2 = new Simplex_VSA.A();
+                Simplex_TVN.A obj1 = new Simplex_TVN.A();
+                Simplex_TVN.A obj2 = new Simplex_TVN.A();
 
                 // for simplex proxy
-               A obj1 = new A();
-                A obj2 = new A();
-               //
-               obj1.s = this.textBoxS1.Text;
-               obj1.k = int.Parse(this.textBoxK1.Text);
-               obj1.f = float.Parse(this.textBoxF1.Text);
-              
-               obj2.s = this.textBoxS2.Text;
-               obj2.k = int.Parse(this.textBoxK2.Text);
-               obj2.f = float.Parse(this.textBoxF2.Text);
+                //A obj1 = new A();
+                //A obj2 = new A();
+
+                obj1.s = this.textBoxS1.Text;
+                obj1.k = int.Parse(this.textBoxK1.Text);
+                obj1.f = float.Parse(this.textBoxF1.Text);
+
+                obj2.s = this.textBoxS2.Text;
+                obj2.k = int.Parse(this.textBoxK2.Text);
+                obj2.f = float.Parse(this.textBoxF2.Text);
 
                 // for connected service
-               //Simplex_VSA.A resultObj = simplex_client.Sum(obj1, obj2);
+                Simplex_TVN.A resultObj = simplex_client.Sum(obj1, obj2);
 
                 // for simplex proxy 
-                A resultObj = simplex_client.Sum(obj1, obj2);
-                //
-                //
+                //A resultObj = simplex_client.Sum(obj1, obj2);
+
+
                 this.textBoxResultF.Text = resultObj.f.ToString();
                 this.textBoxResultK.Text = resultObj.k.ToString();
                 this.textBoxResultS.Text = resultObj.s;
@@ -71,6 +71,11 @@ namespace PWS_4_WF
         }
 
         private void textBoxF1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelS1_Click(object sender, EventArgs e)
         {
 
         }
