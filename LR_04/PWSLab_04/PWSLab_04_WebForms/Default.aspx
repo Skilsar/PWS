@@ -49,7 +49,7 @@
     <hr />
     <asp:Button runat="server" ID="sum" OnClick="sum_Click" Text="Sum" />
 <asp:Button runat="server" ID="concat" OnClick="sum_Click_concat" Text="Concat" />
-<asp:Button runat="server" ID="Button2" OnClick="DetermineAndOperate" Text="Sum" />
+<asp:Button runat="server" ID="Button2" OnClick="DetermineAndOperate" Text="Adds" />
         <hr />
         <%--<div>
             x:
