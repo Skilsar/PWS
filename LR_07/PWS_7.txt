@@ -1,0 +1,5 @@
+netsh http add urlacl url=http://+:8080/ user=%USERDOMAIN%\%USERNAME%
+
+netsh http add urlacl url=http://+:40125/PWS_7/ user=SKILSAR\Skilsar
+
+netsh http add urlacl url=http://+:40124/PWS_7/ user=SKILSAR\Skilsar
